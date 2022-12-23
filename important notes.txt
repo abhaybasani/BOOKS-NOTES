@@ -1,0 +1,80 @@
+#-----------------   CMD  ----------------
+
+*search a particular part of a ip address.
+
+>ipconfig /all |findstr dns
+
+*for reconfigure ip address
+>ipconfig /release
+
+*for refresh a new ip address for your computer
+>ipconfig /renew
+OR
+>ipconfig /renew "WiFi"
+
+*display all saved DNS
+>ipconfig /displaydns
+
+*copy some command output on your clipboard
+>ipconfig /displaydns | clip
+
+*flush all the dns data
+>ipconfig /flushdns
+
+*get ip of any domain/website
+>nslookup adani.com
+>nslookup -type=ptr adani.com
+
+*check mac address
+>getmac /v
+
+*check where ur pc conzume more power
+>powercfg /energy
+
+*get battery report
+>powercfg /batteryreport
+NOTE: copy the given path and paste on browser
+
+*Check which file type open with which application
+>assoc
+*change file type default application
+>assoc .mp4=VLC.vlc
+
+#fix your crupted harddisk and drive,[/f=force]
+>chkdsk /f
+#check your system essue and fix them
+>chkdsk /r
+
+>sfc /scannow
+
+*for fix your system image
+>DISM /Online /Cleanup-Image /CheckHealth 
+>DISM /Online /Cleanup-Image /ScanHealth
+>DISM /Onlene /Cleanup-Image /RestoreHealth
+
+*find particular process in task manager [ /f=force ,/pid=process id ]
+>tasklist | findstr script
+>taskkill /f /pid 20184
+
+*get network wifi report
+>netsh wlan show wlanreport
+Note:- open a file location via browser.
+
+#show all internet interface
+>netsh interface show interface
+
+#filter the ip address 
+>netsh interface ip show address | findstr "IP Address"
+
+*Show network DNS server
+>netsh interface ip show dnsservers
+
+#Turn off windows firewall via command
+
+>netsh advfirewall set allprofiles state off
+>netsh advfirewall set allprofiles state on
+
+
+
+
+
