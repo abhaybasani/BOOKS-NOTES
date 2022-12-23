@@ -74,6 +74,39 @@ Note:- open a file location via browser.
 >netsh advfirewall set allprofiles state off
 >netsh advfirewall set allprofiles state on
 
+>tracert
+>tracert adani.com
+#  -d = domain/website
+>tracert -d adani.com
+
+#network status
+>netstat
+#  -a =all , -f =force
+>netstat -af
+#give netword report acording to data
+>netsh -e -t 5
+
+#router data table
+>route print
+
+#add your routing data on routing table
+>route add 192.168.40.0 mask 255.255.255.0 10.7.1.44
+
+#delete your add routing data
+>route delete 192.168.40.0
+
+# restart a computer and open computer bios
+>shutdown /r /fw /f /t 0
+
+#check all network physical Adress
+>arp -a
+
+#check your path for reached domain/website
+>pathping adani.com
+
+
+
+
 
 
 
