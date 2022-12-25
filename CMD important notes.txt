@@ -2,6 +2,8 @@
 
 *search a particular part of a ip address.
 
+>systeminfo
+
 >ipconfig /all |findstr dns
 
 *for reconfigure ip address
@@ -223,8 +225,31 @@ task 1: inject usb on device
 *trace route
 >tracert
 
-*get all local IP details
+*get all local IP details [  show all n/w that are connected to you ]
 >netstat
+>netstat -n
+>netstat -a
+
+#-----  Scan Net BIOS  -------
+*help
+>nbtstat
+*-a [adapted status]
+>nbtstat -a
+*-c [cache]
+>nbtstat -c
+*-n [name]
+>nbtstat -n
+*-R [reload]
+>nbtstat -R
+*-r [resolve]
+>nbtstat -r
+*-s [session]
+>nbtstat -S
+OR
+>nbtstat 10.16.132.27
+
+
+
 
 *change CMD tittle
 >tittle newtask
@@ -234,7 +259,17 @@ task 1: inject usb on device
 >shutdown -s -t 00
 >shutdown -r -t 00 
 
+>netsh
+*for help 
+netsh>?
 
+*show all the connected devices to your computer
+>net view
+*show all shared info about your computer
+>net share
+
+*check bios info through your computer
+administrator>msinfo32
 
 
 
