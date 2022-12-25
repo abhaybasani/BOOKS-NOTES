@@ -104,8 +104,135 @@ Note:- open a file location via browser.
 #check your path for reached domain/website
 >pathping adani.com
 
+#----------------------------------------------------------------------------------
+
+#---------------------        BASICS CMD  ------------------------------------------
+
+*create a file 
+>type null>test.txt
+
+*rename a file
+>ren test.txt test00.txt
+
+*copy a file
+>copy test00.txt /newfolder
+
+*export file
+>copy con test.txt
+
+*move a file
+>move test.txt /newfolder
+
+#----------------     TASK and Services   --------------------
+
+>tasklist
+
+>taskkill /pid 1332
+
+*start a services
+>net stop "windows firewall"
+>net start "windows firewall"
+
+*for know driver information
+>driverquery
+
+*read a file
+>more test.txt
 
 
+#----------------------   USB AND DISK RELATED --------------------
+
+task 1: inject usb on device
+
+>diskport
+>list diskport
+
+>select disk 1
+>clean
+
+*create promary partition
+
+>create partition primary
+>select parition 1
+>format fs=ntfs quick
+
+>active
+>assign
+
+*name USB
+>lable E:
+
+
+#--------    Wireless Commands   -------------
+*Details of connected wifi
+>netsh wlan show profiles
+
+*Show protocol & details [all info]
+>netsh wlan show all
+
+*Show connected wifi password
+>netsh wlan show profile "ch6" key=clear
+
+#------------    Managing User Account    ----------
+>net user
+
+*Create a user A/C
+>net user name /add passpin
+
+*delete user A/C
+>net user ms /del
+
+*create Administrator /active:yes
+>net user administrator /active:yes
+
+
+#-----------    Hide & Encript file    ---------------
+*hide all file
+>attrib th tr ts 
+
+*show hide file (all)
+>attrib -h -r -s
+
+*Encrypt a file
+>cipher /e 
+
+*Encrypt file details
+>cipher /c
+
+*un-encrypt file
+>cipher /d
+
+*Encrypt key Update
+>cipher /rekey
+
+*extenction details
+>assoc.txt
+
+#-------------------       Networking  Commands  -----------------------------
+
+*change PC wifi hotspot 
+>netsh wlan set hostednetwork mode=allow ssid=LINE key=pass1234
+>netsh wlan start hostednetwork
+
+>hostname
+
+>ipconfig
+
+>getmac
+
+*trace route
+>tracert
+
+*get all local IP details
+>netstat
+
+*change CMD tittle
+>tittle newtask
+
+>tree
+#-s =shutdown, -t =time, -r =restart
+>shutdown -s -t 00
+>shutdown -r -t 00 
 
 
 
