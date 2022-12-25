@@ -1,5 +1,18 @@
 #-----------------   CMD  ----------------
 
+#--------   Setting for date and time   -------------
+>net stop w32time
+>w32tm /unregister
+>w32tm /register
+>net start w32time
+>w32tm /resyne /nowait
+
+* restart your PC
+
+#if not do 
+>net time \\DCname.adani.com /set 
+>w32tm /query /status
+
 #-----------   restore the older version of OS  --------
 win+R -->rstui.exe
 
