@@ -1,5 +1,8 @@
 #-----------------   CMD  ----------------
 
+#-----------   restore the older version of OS  --------
+win+R -->rstui.exe
+
 *search a particular part of a ip address.
 
 >systeminfo
@@ -215,6 +218,11 @@ task 1: inject usb on device
 *change PC wifi hotspot 
 >netsh wlan set hostednetwork mode=allow ssid=LINE key=pass1234
 >netsh wlan start hostednetwork
+
+#fix wifi issue
+>netsh winsock reset catalog
+>netsh int ip reset reset.log
+>netcfg -d
 
 >hostname
 
