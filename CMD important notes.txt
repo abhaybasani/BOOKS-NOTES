@@ -1,4 +1,17 @@
 #-----------------   CMD  ----------------
+#--- Some Important Variable  -------
+%APPDATA%
+%CommonProgramFiles%
+%COMPUTERNAME%
+%ProgramFiles%
+%ProgramData%
+%SYSTEMROOT%
+%TEMP%
+%TMP%
+%USERPROFILE%
+%WINDIR%
+
+
 
 #--------   Setting for date and time   -------------
 >net stop w32time
