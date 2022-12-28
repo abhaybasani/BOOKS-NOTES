@@ -1,0 +1,87 @@
+use pstools on workgroup pc?
+	To use PsTools on a workgroup PC (i.e., a PC that is not part of a domain), you will need to ensure that you have the necessary permissions to access the remote system. Specifically, you will need to have an account on the remote system with the "Log on as a batch job" privilege, and you will need to ensure that the Remote Registry service is running on the remote system.
+	Once you have the necessary permissions and services in place, you can use PsTools to manage processes on the remote system by specifying the name or IP address of the remote system as part of the command. For example, to list the processes running on a workgroup PC with the IP address 192.168.1.100, you could use the following command:
+	
+	pslist \\192.168.1.100
+	
+	If the remote system is configured to use a different port for the Remote Registry service (which is the default port is not open), you can specify the port number using the following syntax:
+
+	pslist \\192.168.1.100:port_number
+	
+#----------------------------------------------------------------------------------
+
+what is Remote Registry service?
+		The Remote Registry service is a Windows service that allows users to remotely view and modify the registry on a Windows system. The service is disabled by default, but can be enabled if you need to access the registry of a remote system over the network.
+
+		To enable the Remote Registry service, follow these steps:
+
+		1->Open the Services snap-in. To do this, press the Windows key + R, type "services.msc" into the Run dialog, and press Enter.
+
+		2->In the Services snap-in, locate the "Remote Registry" service.
+
+		3->Right-click the "Remote Registry" service and select "Properties".
+
+		4->In the "Remote Registry Properties" window, click the "Start" button to start the service.
+
+		5->In the "Startup type" dropdown, select "Automatic" to ensure that the service starts automatically when the system boots.
+
+		6->Click "Apply" and then "OK" to save the changes.
+
+Once the Remote Registry service is running, you should be able to access the registry of the remote system using tools such as PsTools.
+
+I hope this helps! Let me know if you have any other questions.
+
+#-------------------------------------------------------------------------------
+
+
+get remote access on workgroup pc using pstools?
+
+		To get remote access to a workgroup PC (i.e., a PC that is not part of a domain) using PsTools, you will need to ensure that you have the necessary permissions to access the remote system. Specifically, you will need to have an account on the remote system with the "Log on as a batch job" privilege, and you will need to ensure that the Remote Registry service is running on the remote system.
+		Once you have the necessary permissions and services in place, you can use PsTools to manage processes on the remote system by specifying the name or IP address of the remote system as part of the command. For example, to list the processes running on a workgroup PC with the IP address 192.168.1.100, you could use the following command:
+
+		pslist \\192.168.1.100
+		
+what is Log on as a batch job?
+		"Log on as a batch job" is a user right in Windows that allows a user to log on to the system and run batch files. When a user has this right, they can schedule a task to run on the system, or they can use tools such as PsTools to remotely manage processes on the system.
+
+		To grant a user the "Log on as a batch job" right, follow these steps:
+
+		1->Open the Local Security Policy snap-in. To do this, press the Windows key + R, type "secpol.msc" into the Run dialog, and press Enter.
+
+		2->In the Local Security Policy snap-in, expand "Local Policies" and click "User Rights Assignment".
+
+		3->In the right-hand pane, double-click the "Log on as a batch job" policy.
+
+		4->In the "Log on as a batch job Properties" window, click the "Add User or Group" button.
+
+		5->In the "Select Users or Groups" window, enter the name of the user or group that you want to grant the right to, and then click "OK".
+
+		6->Click "OK" in the "Log on as a batch job Properties" window to save the changes.
+
+		Keep in mind that granting a user the "Log on as a batch job" right can be a security risk, as it allows the user to run arbitrary code on the system. As such, it is important to carefully consider which users or groups you grant this right to.
+		
+#----------------------------------------------------------------------------------------------
+
+create account on the remote system?
+		To create an account on a remote system, you will need to have administrative access to the system. With administrative access, you can use the following steps to create a new user account:
+
+		1->Open the Computer Management snap-in. To do this, press the Windows key + R, type "compmgmt.msc" into the Run dialog, and press Enter.
+
+		2->In the Computer Management snap-in, expand "System Tools" and click "Local Users and Groups".
+
+		3->In the right-hand pane, right-click the "Users" folder and select "New User".
+
+		4->In the "New User" window, enter the desired user name, password, and other account details, and then click "Create".
+
+		5->In the "Local Users and Groups" snap-in, double-click the new user account to open the "Properties" window.
+
+		6->In the "Properties" window, click the "Member Of" tab, and then click the "Add" button.
+
+		7->In the "Select Groups" window, enter the name of the group that you want to add the user to (e.g., "Administrators"), and then click "OK".
+
+		8->Click "OK" in the "Properties" window to save the changes.
+
+		Keep in mind that creating a new user account on a remote system will require you to have administrative access to the system. If you do not have administrative access, you will need to contact the administrator of the system to create a new user account.
+
+		I hope this helps! Let me know if you have any other questions.		
+		
