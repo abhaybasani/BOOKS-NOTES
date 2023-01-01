@@ -10,7 +10,8 @@
 // 3) Java ME (Java Micro Edition)
 // 4) JavaFX
 
-// data Types in java 
+// data Types in java [2 types of data types 1-primitive dataType 2- Non-primitive dataType]
+// Primitive DataType
 // 1-> int
 // 2-> long
 // 3-> double
@@ -19,6 +20,9 @@
 // 6-> float
 // 7-> char
 // 8-> boolean
+
+// Non-Primitive Data Type
+
 
 //  write hello world program in java
 public class javaNotes {
