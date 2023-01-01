@@ -7,7 +7,7 @@
 // There are 4 platforms or editions of Java:
 // 1) Java SE (Java Standard Edition)
 // 2) Java EE (Java Enterprise Edition)
-// 3) Java ME (Java Micro Edition)
+// 3) Java ME (Java Micro Edition) 
 // 4) JavaFX
 
 // data Types in java [2 types of data types 1-primitive dataType 2- Non-primitive dataType]
@@ -57,4 +57,3 @@ public class javaNotes {
         System.out.println(byt);
     }
 }
-

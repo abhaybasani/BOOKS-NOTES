@@ -1,0 +1,2 @@
+#airodump-ng wlan0mon
+#airodump-ng --bssid 7C:S2:89:MM:8U:9I --channel 2 wlan0mon 
