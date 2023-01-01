@@ -10,6 +10,16 @@
 // 3) Java ME (Java Micro Edition)
 // 4) JavaFX
 
+// data Types in java 
+// 1-> int
+// 2-> long
+// 3-> double
+// 4-> short
+// 5-> byte
+// 6-> float
+// 7-> char
+// 8-> boolean
+
 //  write hello world program in java
 public class javaNotes {
 
@@ -44,8 +54,3 @@ public class javaNotes {
     }
 }
 
-public class javaVar{
-    public static void main(string args[]){
-        System.out.println("hello");
-    }
-}
