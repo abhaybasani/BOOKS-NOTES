@@ -67,3 +67,6 @@ goto:--    tryhackme.com/room/linuxprivesc
 
 #-------- SUID/SGID Executables --known Exploits
 Task 11:  SUID/SGID Executables-Known Exploits
+
+SUID = 
+SGID = 
